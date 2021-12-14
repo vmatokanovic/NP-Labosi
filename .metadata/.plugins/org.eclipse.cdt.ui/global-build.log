@@ -1,19 +1,637 @@
-12:17:38 **** Incremental Build of configuration Debug for project LV5 ****
+
+**** Build of configuration Debug for project LV6 ****
+
+Nothing to build for project LV6
+11:01:19 **** Incremental Build of configuration Debug for project LV6 ****
 make all 
-Building file: ../functions.c
+Building file: ../myString.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"functions.d" -MT"functions.o" -o "functions.o" "../functions.c"
-../functions.c: In function ‘factorial’:
-../functions.c:13:1: warning: control reaches end of non-void function [-Wreturn-type]
-   13 | }
-      | ^
-Finished building: ../functions.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+../myString.c: In function ‘stringTrim’:
+../myString.c:25:19: error: empty character constant
+   25 |          str[j] = '';
+      |                   ^~
+../myString.c:29:20: error: empty character constant
+   29 |           str[k] = '';
+      |                    ^~
+../myString.c: In function ‘main’:
+../myString.c:35:2: error: ‘str1’ undeclared (first use in this function)
+   35 |  str1[]=" String with 1 left space and 3 right spaces   ";
+      |  ^~~~
+../myString.c:35:2: note: each undeclared identifier is reported only once for each function it appears in
+../myString.c:35:7: error: expected expression before ‘]’ token
+   35 |  str1[]=" String with 1 left space and 3 right spaces   ";
+      |       ^
+../myString.c:36:53: error: expected expression before ‘]’ token
+   36 |  printf("Duljina stringa je: %d", stringLength(str1[]));
+      |                                                     ^
+make: *** [subdir.mk:20: myString.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:07:03 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+../myString.c: In function ‘main’:
+../myString.c:38:2: error: ‘str1’ undeclared (first use in this function)
+   38 |  str1[]=" String with 1 left space and 3 right spaces   ";
+      |  ^~~~
+../myString.c:38:2: note: each undeclared identifier is reported only once for each function it appears in
+../myString.c:38:7: error: expected expression before ‘]’ token
+   38 |  str1[]=" String with 1 left space and 3 right spaces   ";
+      |       ^
+../myString.c:39:53: error: expected expression before ‘]’ token
+   39 |  printf("Duljina stringa je: %d", stringLength(str1[]));
+      |                                                     ^
+make: *** [subdir.mk:20: myString.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:07:45 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+../myString.c: In function ‘main’:
+../myString.c:39:53: error: expected expression before ‘]’ token
+   39 |  printf("Duljina stringa je: %d", stringLength(str1[]));
+      |                                                     ^
+../myString.c:38:7: warning: variable ‘str1’ set but not used [-Wunused-but-set-variable]
+   38 |  char str1[]= " String with 1 left space and 3 right spaces   ";
+      |       ^~~~
+make: *** [subdir.mk:20: myString.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:08:51 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+../myString.c: In function ‘main’:
+../myString.c:39:53: error: expected expression before ‘]’ token
+   39 |  printf("Duljina stringa je: %d", stringLength(str1[]));
+      |                                                     ^
+../myString.c:38:7: warning: variable ‘str1’ set but not used [-Wunused-but-set-variable]
+   38 |  char str1[]= " String with 1 left space and 3 right spaces   ";
+      |       ^~~~
+make: *** [subdir.mk:20: myString.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:09:09 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+Finished building: ../myString.c
  
-Building target: LV5
+Building target: LV6
 Invoking: GCC C Linker
-gcc  -o "LV5"  ./functionEg.o ./functions.o   
-Finished building target: LV5
+gcc  -o "LV6"  ./myString.o   
+Finished building target: LV6
  
-12:17:53 **** Incremental Build of configuration Debug for project LV5 ****
+11:09:19 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:10:04 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+Finished building: ../myString.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./myString.o   
+Finished building target: LV6
+ 
+11:10:07 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:12:12 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+Finished building: ../myString.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./myString.o   
+Finished building target: LV6
+ 
+11:12:15 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:12:35 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:14:07 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+Finished building: ../myString.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./myString.o   
+Finished building target: LV6
+ 
+11:14:09 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:14:16 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+Finished building: ../myString.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./myString.o   
+Finished building target: LV6
+ 
+11:14:19 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:16:08 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+Finished building: ../myString.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./myString.o   
+Finished building target: LV6
+ 
+11:16:13 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:19:13 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../myString.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"myString.d" -MT"myString.o" -o "myString.o" "../myString.c"
+Finished building: ../myString.c
+ 
+Building file: ../str_example_2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"str_example_2.d" -MT"str_example_2.o" -o "str_example_2.o" "../str_example_2.c"
+../str_example_2.c: In function ‘main’:
+../str_example_2.c:36:53: error: ‘s’ undeclared (first use in this function); did you mean ‘ms’?
+   36 |  printf("\nTokenizing string by space delimiter\n", s);
+      |                                                     ^
+      |                                                     ms
+../str_example_2.c:36:53: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [subdir.mk:23: str_example_2.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:31:34 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../align1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"align1.d" -MT"align1.o" -o "align1.o" "../align1.c"
+../align1.c: In function ‘main’:
+../align1.c:24:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   24 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:24:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   24 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:25:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   25 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:25:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   25 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:26:102: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   26 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                                                                                                      ^
+../align1.c:26:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   26 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+Finished building: ../align1.c
+ 
+Building file: ../str_example_2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"str_example_2.d" -MT"str_example_2.o" -o "str_example_2.o" "../str_example_2.c"
+Finished building: ../str_example_2.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./align1.o ./myString.o ./str_example_2.o   
+Finished building target: LV6
+ 
+11:52:19 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:52:25 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:54:44 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../align1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"align1.d" -MT"align1.o" -o "align1.o" "../align1.c"
+../align1.c:15:9: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+   15 | #pragma pack(pop)   /* restore original alignment from stack */
+      |         ^~~~
+../align1.c: In function ‘main’:
+../align1.c:24:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   24 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:24:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   24 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:25:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   25 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:25:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   25 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:26:102: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   26 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                                                                                                      ^
+../align1.c:26:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   26 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+Finished building: ../align1.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./align1.o ./myString.o ./str_example_2.o   
+Finished building target: LV6
+ 
+11:54:46 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:55:23 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../align1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"align1.d" -MT"align1.o" -o "align1.o" "../align1.c"
+../align1.c:16:9: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+   16 | #pragma pack(pop)   /* restore original alignment from stack */
+      |         ^~~~
+../align1.c: In function ‘main’:
+../align1.c:25:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   25 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:25:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   25 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:26:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   26 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:26:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   26 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:27:102: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   27 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                                                                                                      ^
+../align1.c:27:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   27 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+Finished building: ../align1.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./align1.o ./myString.o ./str_example_2.o   
+Finished building target: LV6
+ 
+11:55:26 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:56:24 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../align1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"align1.d" -MT"align1.o" -o "align1.o" "../align1.c"
+../align1.c:16:9: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+   16 | #pragma pack(pop)   /* restore original alignment from stack */
+      |         ^~~~
+../align1.c: In function ‘main’:
+../align1.c:25:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   25 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:25:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   25 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:26:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   26 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:26:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   26 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:27:102: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   27 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                                                                                                      ^
+../align1.c:27:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   27 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+Finished building: ../align1.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./align1.o ./myString.o ./str_example_2.o   
+Finished building target: LV6
+ 
+11:56:26 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+11:58:36 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+Building file: ../align1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"align1.d" -MT"align1.o" -o "align1.o" "../align1.c"
+../align1.c:16:9: warning: #pragma pack (pop) encountered without matching #pragma pack (push) [-Wpragmas]
+   16 | #pragma pack(pop)   /* restore original alignment from stack */
+      |         ^~~~
+../align1.c: In function ‘main’:
+../align1.c:25:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   25 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:25:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   25 |  printf("arr1     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr1),  &arr1,      ((int)(&arr1)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:26:93: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   26 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                                                                                             ^
+../align1.c:26:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   26 |  printf("arr2     size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(arr2),  &arr2,      ((int)(&arr2)%4)      ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+../align1.c:27:102: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   27 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                                                                                                      ^
+../align1.c:27:25: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   27 |  printf("struct   size %d  \taddr: %p (4-byte alligned: %s)\n", sizeof(example_struct), &ex_struct, ((int)(&ex_struct)%4) ? "NO" : "YES");
+      |                        ~^                                       ~~~~~~~~~~~~~~~~~~~~~~
+      |                         |                                       |
+      |                         int                                     long unsigned int
+      |                        %ld
+Finished building: ../align1.c
+ 
+Building target: LV6
+Invoking: GCC C Linker
+gcc  -o "LV6"  ./align1.o ./myString.o ./str_example_2.o   
+Finished building target: LV6
+ 
+11:58:40 **** Incremental Build of configuration Debug for project LV6 ****
+make all 
+make: Nothing to be done for 'all'.
+12:05:15 **** Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c: In function ‘main’:
+../zadaci.c:19:12: error: request for member ‘data1’ in something not a structure or union
+   19 |  ptr = &ptr.data1;
+      |            ^
+../zadaci.c:21:9: warning: too many arguments for format [-Wformat-extra-args]
+   21 |  printf("&d", sizeof(*ptr));
+      |         ^~~~
+../zadaci.c:17:17: warning: unused variable ‘ex_struct’ [-Wunused-variable]
+   17 |  example_struct ex_struct;
+      |                 ^~~~~~~~~
+make: *** [subdir.mk:20: zadaci.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:05:57 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c: In function ‘main’:
+../zadaci.c:21:9: warning: too many arguments for format [-Wformat-extra-args]
+   21 |  printf("&d", sizeof(*ptr));
+      |         ^~~~
+Finished building: ../zadaci.c
+ 
+Building target: LV6_b
+Invoking: GCC C Linker
+gcc  -o "LV6_b"  ./zadaci.o   
+Finished building target: LV6_b
+ 
+12:06:03 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+make: Nothing to be done for 'all'.
+12:06:12 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c: In function ‘main’:
+../zadaci.c:21:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   21 |  printf("%d", sizeof(*ptr));
+      |          ~^   ~~~~~~~~~~~~
+      |           |   |
+      |           int long unsigned int
+      |          %ld
+Finished building: ../zadaci.c
+ 
+Building target: LV6_b
+Invoking: GCC C Linker
+gcc  -o "LV6_b"  ./zadaci.o   
+Finished building target: LV6_b
+ 
+12:06:15 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+make: Nothing to be done for 'all'.
+12:06:32 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c: In function ‘main’:
+../zadaci.c:21:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   21 |  printf("%d", sizeof(ptr));
+      |          ~^   ~~~~~~~~~~~
+      |           |   |
+      |           int long unsigned int
+      |          %ld
+Finished building: ../zadaci.c
+ 
+Building target: LV6_b
+Invoking: GCC C Linker
+gcc  -o "LV6_b"  ./zadaci.o   
+Finished building target: LV6_b
+ 
+12:06:35 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+make: Nothing to be done for 'all'.
+12:09:38 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c: In function ‘main’:
+../zadaci.c:21:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   21 |  printf("%d", sizeof(*ptr));
+      |          ~^   ~~~~~~~~~~~~
+      |           |   |
+      |           int long unsigned int
+      |          %ld
+Finished building: ../zadaci.c
+ 
+Building target: LV6_b
+Invoking: GCC C Linker
+gcc  -o "LV6_b"  ./zadaci.o   
+Finished building target: LV6_b
+ 
+12:09:40 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+make: Nothing to be done for 'all'.
+12:09:56 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c: In function ‘main’:
+../zadaci.c:21:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   21 |  printf("%d", sizeof(*ptr));
+      |          ~^   ~~~~~~~~~~~~
+      |           |   |
+      |           int long unsigned int
+      |          %ld
+Finished building: ../zadaci.c
+ 
+Building target: LV6_b
+Invoking: GCC C Linker
+gcc  -o "LV6_b"  ./zadaci.o   
+Finished building target: LV6_b
+ 
+12:09:59 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+make: Nothing to be done for 'all'.
+12:10:12 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c: In function ‘main’:
+../zadaci.c:21:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   21 |  printf("%d", sizeof(*ptr));
+      |          ~^   ~~~~~~~~~~~~
+      |           |   |
+      |           int long unsigned int
+      |          %ld
+Finished building: ../zadaci.c
+ 
+Building target: LV6_b
+Invoking: GCC C Linker
+gcc  -o "LV6_b"  ./zadaci.o   
+Finished building target: LV6_b
+ 
+12:10:14 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+make: Nothing to be done for 'all'.
+12:10:22 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c: In function ‘main’:
+../zadaci.c:21:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   21 |  printf("%d", sizeof(*ptr));
+      |          ~^   ~~~~~~~~~~~~
+      |           |   |
+      |           int long unsigned int
+      |          %ld
+Finished building: ../zadaci.c
+ 
+Building target: LV6_b
+Invoking: GCC C Linker
+gcc  -o "LV6_b"  ./zadaci.o   
+Finished building target: LV6_b
+ 
+12:10:25 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+make: Nothing to be done for 'all'.
+12:10:38 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c: In function ‘main’:
+../zadaci.c:21:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   21 |  printf("%d", sizeof(*ptr));
+      |          ~^   ~~~~~~~~~~~~
+      |           |   |
+      |           int long unsigned int
+      |          %ld
+Finished building: ../zadaci.c
+ 
+Building target: LV6_b
+Invoking: GCC C Linker
+gcc  -o "LV6_b"  ./zadaci.o   
+Finished building target: LV6_b
+ 
+12:10:40 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+make: Nothing to be done for 'all'.
+12:18:06 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+../zadaci.c:2:10: fatal error: stlib.h: No such file or directory
+    2 | #include <stlib.h>
+      |          ^~~~~~~~~
+compilation terminated.
+make: *** [subdir.mk:20: zadaci.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:18:15 **** Incremental Build of configuration Debug for project LV6_b ****
+make all 
+Building file: ../zadaci.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"zadaci.d" -MT"zadaci.o" -o "zadaci.o" "../zadaci.c"
+Finished building: ../zadaci.c
+ 
+Building target: LV6_b
+Invoking: GCC C Linker
+gcc  -o "LV6_b"  ./zadaci.o   
+Finished building target: LV6_b
+ 
+12:18:17 **** Incremental Build of configuration Debug for project LV6_b ****
 make all 
 make: Nothing to be done for 'all'.
