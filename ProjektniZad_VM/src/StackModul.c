@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct node
 {
-    char *povr_vrijednost;	//jer funkcija vraca povratnu vrijednost, naziv i broj argumenata
-    char *naziv;
-    char *broj_arg;
+    char povr_vrijednost[20];	//jer funkcija vraca povratnu vrijednost, naziv i broj argumenata
+    char naziv[20];
+    char broj_arg[20];
     struct node *next;
 }node;
 
@@ -17,15 +18,18 @@ typedef struct linked_list
 	struct node *top;
 }stack;
 
-node* new_node(char povr_vrijednost, char naziv, char broj_arg) {	//inicijalizacija node-a
+node* new_node(char povr_vrijednost[], char naziv[], char broj_arg[]) {	//inicijalizacija node-a
 	node *z;
 	z = malloc(sizeof(struct node));
-	z->povr_vrijednost=malloc(10*sizeof(char));
-	z->povr_vrijednost = povr_vrijednost;
-	z->naziv=malloc(10*sizeof(char));
-	z->naziv = naziv;
-	z->broj_arg=malloc(10*sizeof(char));
-	z->broj_arg = broj_arg;
+	int i = 0;
+	for(i = 0; i < 20; i++){
+		z->povr_vrijednost[i]=malloc(sizeof(char));
+		z->povr_vrijednost[i] = povr_vrijednost[i];
+		z->naziv[i]=malloc(sizeof(char));
+		z->naziv[i] = naziv[i];
+		z->broj_arg[i]=malloc(sizeof(char));
+		z->broj_arg[i] = broj_arg[i];
+	}
 	z->next = NULL;
 	return z;
 }
@@ -35,6 +39,7 @@ stack* new_stack(int size) { //inicijalizacija stoga
 	s->head = NULL;
 	s->top = NULL;
 	s->max_size=size;
+	s->stack_count=0;
 	return s;
 }
 
@@ -52,110 +57,131 @@ int is_full(stack *s){
 	return 0;
 }
 
-void push(stack *s, char povr_vrijednost, char naziv, char broj_arg) {
+void push(stack *s, char povr_vrijednost[], char naziv[], char broj_arg[]) {
 if(is_empty(s)) { //ako je empty
 	node *a;
 	a = new_node(povr_vrijednost,naziv,broj_arg); //TU SI STAO, IDUCE pridruziti argumente i onda ih postavljati u stog
-	s->head = n;
-	s->top = n;
+	for(int i = 0; i<20; i++)
+	{
+		a->povr_vrijednost[i] = povr_vrijednost[i];
+		a->naziv[i] = naziv[i];
+		a->broj_arg[i] = broj_arg[i];
+	}
+	s->head = a;
+	s->top = a;
 	s->stack_count++;
-	printf("Pushan je element: %c\n",n->povr_vrijednost);
+	printf("Pushani su elementi: %s %s, broj argumenata: %s\n", a->povr_vrijednost, a->naziv, a->broj_arg);
 	}
 else if (is_full(s)){
 	printf("Stog je pun! Nije moguce dodati nove elemente.\n");
 }
 else {
-	s->top->next = n;
-  	s->top = n;
+	node *a;
+	a = new_node(povr_vrijednost,naziv,broj_arg); //TU SI STAO, IDUCE pridruziti argumente i onda ih postavljati u stog
+	for(int i = 0; i<20; i++)
+		{
+			a->povr_vrijednost[i] = povr_vrijednost[i];
+			a->naziv[i] = naziv[i];
+			a->broj_arg[i] = broj_arg[i];
+		}
+	s->top->next = a;
+  	s->top = a;
   	s->stack_count++;
-  	printf("Pushan je element: %c\n", n->povr_vrijednost);
+  	printf("Pushani su elementi: %s %s, broj argumenata: %s\n", a->povr_vrijednost, a->naziv, a->broj_arg);
 	}
 }
 
-int pop(stack *s) {
+void pop(stack *s) {
 	if(is_empty(s)) {
 	  printf("Stog je prazan! Nije moguce izbaciti elemente.\n");
 	}
 	else {
-	  int x = s->top->data;
 	  if(s->top == s->head) {// only one node
+		  printf("Popani su elementi: %s %s, broj argumenata: %s\n", s->head->povr_vrijednost, s->head->naziv, s->head->broj_arg);
 		  free(s->top);
 		  s->top = NULL;
 		  s->head = NULL;
 		  s->stack_count--;
 	  }
 	  else {
+		  printf("Popani su elementi: %s %s, broj argumenata: %s\n", s->top->povr_vrijednost, s->top->naziv, s->top->broj_arg);
 		  node *temp = s->head;
 		  while(temp->next != s->top) // iterating to the last element
 		  temp = temp->next;
 		  temp->next = NULL;
 		  free(s->top);
 		  s->top = temp;
-		  s->stack_count++;
+		  s->stack_count--;
 	  }
-	  return x;
 	}
 }
 
-
-
-
-
-/*void topelement()
+void delAllElements(stack *s)
 {
-	int topEl = top->data;
-    printf("Last element of stack is: %d \n", topEl);
+    while (s->top != NULL)
+    {
+    	if(s->top == s->head) {// only one node
+    			  free(s->top);
+    			  s->top = NULL;
+    			  s->head = NULL;
+    			  s->stack_count--;
+    		  }
+    		  else {
+    			  node *temp = s->head;
+    			  while(temp->next != s->top) // iterating to the last element
+    			  temp = temp->next;
+    			  temp->next = NULL;
+    			  free(s->top);
+    			  s->top = temp;
+    			  s->stack_count--;
+    		  }
+    }
+    printf("Svi elementi stoga su obrisani! \n");
 }
 
-void displayElements()
+void delStack(stack *s)
 {
-    top1 = top;
-
-    if (top1 == NULL)
-    {
-        printf("Stack is empty! \n");
-        return;
-    }
-
-    while (top1 != NULL)
-    {
-        printf("%d \n", top1->data);
-        top1 = top1->next;
-    }
- }
-
-void delStack()
-{
-    top1 = top;
-
-    while (top1 != NULL)
-    {
-        top1 = top->next;
-        free(top);
-        top = top1;
-        top1 = top1->next;
-    }
-    free(top1);
-    top = NULL;
+    delAllElements(s);
+    free(s);
+    printf("Stog je obrisan! \n");
 }
 
-void isEmpty(){
-	if (top == NULL)
-	        printf("\n Stack is empty.");
-	else
-		printf("\n Stack is not empty.");
-}*/
+void printElements(stack *s)
+{
+	int brojac = 0;
+	if(is_empty(s)) {
+		  printf("Stog je prazan! Nije moguce ispisati elemente.\n");
+	}
+	else {
+		node *temp = s->head;
+		while(brojac != s->stack_count){
+			printf("Element: %s %s, broj argumenata: %s\n", temp->povr_vrijednost, temp->naziv, temp->broj_arg);
+			temp = temp->next;
+			s->top = temp;
+			brojac++;
+		} // iterating to the last element
+	}
+}
+
+void printLastElement(stack *s)
+{
+	if(is_empty(s)) {
+		  printf("Stog je prazan! Nije moguce zadnji element.\n");
+	}
+	node *temp = s->top;
+	printf("Zadnji element: %s %s, broj argumenata: %s\n", temp->povr_vrijednost, temp->naziv, temp->broj_arg);
+}
+
 
 int main(){
 	stack *s = new_stack(10);
 
-	node *a, *b, *c;
-	a = new_node(1,2,3);
-	b = new_node(a,b,c);
-	c = new_node(4,a,5);
-
 	pop(s);
-	push(s,a);
-	push(s,b);
+	push(s,"int","oduzmi","1");
+	push(s,"float","mnozi","3");
+	printLastElement(s);
+	printElements(s);
+	delStack(s);
+	pop(s);
 	return 0;
 }

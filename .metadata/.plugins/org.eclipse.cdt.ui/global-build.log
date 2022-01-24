@@ -1,77 +1,18 @@
-11:05:41 **** Incremental Build of configuration Debug for project ProjektniZad_VM ****
+12:48:03 **** Incremental Build of configuration Debug for project ProjektniZad_VM ****
 make all 
 Building file: ../src/StackModul.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StackModul.d" -MT"src/StackModul.o" -o "src/StackModul.o" "../src/StackModul.c"
 ../src/StackModul.c: In function ‘new_node’:
-../src/StackModul.c:24:21: warning: assignment to ‘char *’ from ‘char’ makes pointer from integer without a cast [-Wint-conversion]
-   24 |  z->povr_vrijednost = povr_vrijednost;
-      |                     ^
-../src/StackModul.c:26:11: warning: assignment to ‘char *’ from ‘char’ makes pointer from integer without a cast [-Wint-conversion]
-   26 |  z->naziv = naziv;
-      |           ^
-../src/StackModul.c:28:14: warning: assignment to ‘char *’ from ‘char’ makes pointer from integer without a cast [-Wint-conversion]
-   28 |  z->broj_arg = broj_arg;
+../src/StackModul.c:26:24: warning: assignment to ‘char’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   26 |   z->povr_vrijednost[i]=malloc(sizeof(char));
+      |                        ^
+../src/StackModul.c:28:14: warning: assignment to ‘char’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   28 |   z->naziv[i]=malloc(sizeof(char));
       |              ^
-../src/StackModul.c: In function ‘push’:
-../src/StackModul.c:60:30: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
-   60 |  printf("Pushan je element: %c\n",n->povr_vrijednost);
-      |                             ~^    ~~~~~~~~~~~~~~~~~~
-      |                              |     |
-      |                              int   char *
-      |                             %s
-../src/StackModul.c:69:32: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
-   69 |    printf("Pushan je element: %c\n", n->povr_vrijednost);
-      |                               ~^     ~~~~~~~~~~~~~~~~~~
-      |                                |      |
-      |                                int    char *
-      |                               %s
-../src/StackModul.c: In function ‘pop’:
-../src/StackModul.c:78:12: warning: initialization of ‘int’ from ‘char *’ makes integer from pointer without a cast [-Wint-conversion]
-   78 |    int x = s->top->povr_vrijednost; //bilo "data" umjesto "povr_vrijednost"
-      |            ^
-../src/StackModul.c: In function ‘main’:
-../src/StackModul.c:152:15: warning: passing argument 1 of ‘new_node’ makes integer from pointer without a cast [-Wint-conversion]
-  152 |  b = new_node(a,b,c);
-      |               ^
-      |               |
-      |               node * {aka struct node *}
-../src/StackModul.c:20:21: note: expected ‘char’ but argument is of type ‘node *’ {aka ‘struct node *’}
-   20 | node* new_node(char povr_vrijednost, char naziv, char broj_arg) { //inicijalizacija node-a
-      |                ~~~~~^~~~~~~~~~~~~~~
-../src/StackModul.c:152:17: warning: passing argument 2 of ‘new_node’ makes integer from pointer without a cast [-Wint-conversion]
-  152 |  b = new_node(a,b,c);
+../src/StackModul.c:30:17: warning: assignment to ‘char’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   30 |   z->broj_arg[i]=malloc(sizeof(char));
       |                 ^
-      |                 |
-      |                 node * {aka struct node *}
-../src/StackModul.c:20:43: note: expected ‘char’ but argument is of type ‘node *’ {aka ‘struct node *’}
-   20 | node* new_node(char povr_vrijednost, char naziv, char broj_arg) { //inicijalizacija node-a
-      |                                      ~~~~~^~~~~
-../src/StackModul.c:152:19: warning: passing argument 3 of ‘new_node’ makes integer from pointer without a cast [-Wint-conversion]
-  152 |  b = new_node(a,b,c);
-      |                   ^
-      |                   |
-      |                   node * {aka struct node *}
-../src/StackModul.c:20:55: note: expected ‘char’ but argument is of type ‘node *’ {aka ‘struct node *’}
-   20 | node* new_node(char povr_vrijednost, char naziv, char broj_arg) { //inicijalizacija node-a
-      |                                                  ~~~~~^~~~~~~~
-../src/StackModul.c:153:17: warning: passing argument 2 of ‘new_node’ makes integer from pointer without a cast [-Wint-conversion]
-  153 |  c = new_node(4,a,5);
-      |                 ^
-      |                 |
-      |                 node * {aka struct node *}
-../src/StackModul.c:20:43: note: expected ‘char’ but argument is of type ‘node *’ {aka ‘struct node *’}
-   20 | node* new_node(char povr_vrijednost, char naziv, char broj_arg) { //inicijalizacija node-a
-      |                                      ~~~~~^~~~~
-../src/StackModul.c: In function ‘pop’:
-../src/StackModul.c:96:1: warning: control reaches end of non-void function [-Wreturn-type]
-   96 | }
-      | ^
-../src/StackModul.c: In function ‘main’:
-../src/StackModul.c:152:6: warning: ‘c’ is used uninitialized in this function [-Wuninitialized]
-  152 |  b = new_node(a,b,c);
-      |      ^~~~~~~~~~~~~~~
-../src/StackModul.c:152:6: warning: ‘b’ is used uninitialized in this function [-Wuninitialized]
 Finished building: ../src/StackModul.c
  
 Building target: ProjektniZad_VM
@@ -79,6 +20,6 @@ Invoking: GCC C Linker
 gcc  -o "ProjektniZad_VM"  ./src/StackModul.o   
 Finished building target: ProjektniZad_VM
  
-11:05:45 **** Incremental Build of configuration Debug for project ProjektniZad_VM ****
+12:48:05 **** Incremental Build of configuration Debug for project ProjektniZad_VM ****
 make all 
 make: Nothing to be done for 'all'.
